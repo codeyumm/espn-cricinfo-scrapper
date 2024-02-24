@@ -1549,9 +1549,12 @@ async function scrapePlayerData(browser, id) {
     const $ = cheerio.load(playerHtml);
     const playerData = [];
 
+    
+
     $('.ds-text-title-s').each((index, element) => {
         playerData.push($(element).text().trim());
     });
+
 
     const row = {
         id: id.Id,
